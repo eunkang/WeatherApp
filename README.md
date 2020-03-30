@@ -1,6 +1,6 @@
 # training_sample
 
-A Sample Weather app
+A siimple weather android application that displays current, hourly, daily forecasting, implemented in Kotlin.
 
 ### Built With
 [Android Studio](https://developer.android.com/studio) - The app framework used
