@@ -1,0 +1,156 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.TitleFragment">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.weatherapp.viewModel.WeatherViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titleConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/TodayHourlyRecycler"
+            android:layout_width="@dimen/four_hundreds"
+            android:layout_height="@dimen/hourly_recyc_height"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginTop="@dimen/seven_dp"
+            android:layout_marginEnd="@dimen/seven_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentWeather" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fiveDaysRecycler"
+            android:layout_width="@dimen/four_hundreds"
+            android:layout_height="@dimen/daily_recyc_height"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/currentWeather"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/current_height"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/currentCityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/one_five_zero_dp"
+                android:layout_marginTop="@dimen/five_five_dp"
+                android:layout_marginEnd="@dimen/one_five_zero_dp"
+                android:fontFamily="@font/exo"
+                android:text="Atlanta, GA"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/two_five_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currTempText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/one_three_zero_dp"
+                android:fontFamily="@font/exo"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/forty_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentCityText" />
+
+            <TextView
+                android:id="@+id/currCondText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/one_five_zero_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/one_five_zero_dp"
+                android:fontFamily="@font/exo"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/twenty_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.511"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/WeatherIcon" />
+
+            <ImageView
+                android:id="@+id/WeatherIcon"
+                android:layout_width="@dimen/seventy_dp"
+                android:layout_height="@dimen/seventy_dp"
+                android:layout_marginStart="@dimen/one_seven_zero_dp"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/one_seven_zero_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currTempText" />
+
+            <TextView
+                android:id="@+id/todayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginTop="@dimen/two_nine_six_dp"
+                android:layout_marginEnd="@dimen/three_five_zero_dp"
+                android:fontFamily="@font/exo"
+                android:text="Today"
+                android:textColor="@color/backgroundCOlorEnd"
+                android:textSize="@dimen/one_seven_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/four_hundreds"
+            android:layout_height="@dimen/five_dp"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/five_dp"
+            android:src="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TodayHourlyRecycler" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="@dimen/four_hundreds"
+            android:layout_height="@dimen/five_dp"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginTop="@dimen/three_dp"
+            android:layout_marginEnd="@dimen/five_dp"
+            android:src="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentWeather" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

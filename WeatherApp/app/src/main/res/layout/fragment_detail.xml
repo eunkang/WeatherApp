@@ -1,0 +1,237 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.TitleFragment">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.weatherapp.viewModel.SecondWeatherViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="@dimen/one_two_five_dp"
+            android:layout_height="@dimen/one_two_five_dp"
+            android:layout_marginStart="@dimen/one_four_five_dp"
+            android:layout_marginTop="@dimen/IMG_margin_top"
+            android:layout_marginEnd="@dimen/one_four_five_dp"
+            android:src="@color/backgroundColorStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DateText" />
+
+        <TextView
+            android:id="@+id/CondText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/one_four_five_dp"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:layout_marginEnd="@dimen/one_four_five_dp"
+            android:fontFamily="@font/exo"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/twenty_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherIcon" />
+
+        <TextView
+            android:id="@+id/DateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/two_hundred"
+            android:layout_marginTop="@dimen/six_five_dp"
+            android:layout_marginEnd="@dimen/two_hundred"
+            android:fontFamily="@font/exo"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/two_five_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/maxTempText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hundred"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:fontFamily="@font/exo"
+            android:text="70°F"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/thirty_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MaxText" />
+
+        <TextView
+            android:id="@+id/sunriseTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/seventy_dp"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:layout_marginBottom="@dimen/two_hundred"
+            android:fontFamily="@font/exo"
+            android:text="4:00am"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/thirty_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunriseText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/humidityPerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hundred"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:layout_marginBottom="@dimen/hundred"
+            android:fontFamily="@font/exo"
+            android:text="87%"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/thirty_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/humadityText"
+            app:layout_constraintVertical_bias="0.057" />
+
+        <TextView
+            android:id="@+id/cloudCoverNumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ninety_three_dp"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:fontFamily="@font/exo"
+            android:text="0.00"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/thirty_sp"
+            app:layout_constraintStart_toEndOf="@+id/humidityPerText"
+            app:layout_constraintTop_toBottomOf="@+id/cloudCoverText" />
+
+        <TextView
+            android:id="@+id/sunsetTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/five_five_dp"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:layout_marginBottom="@dimen/one_eight_zero_dp"
+            android:fontFamily="@font/exo"
+            android:text="12:00am"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/thirty_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sunriseTimeText"
+            app:layout_constraintTop_toBottomOf="@+id/SunsetText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/minTempText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hundred"
+            android:layout_marginTop="@dimen/one_six_dp"
+            android:layout_marginEnd="@dimen/nine_five_dp"
+            android:fontFamily="@font/exo"
+            android:text="40°F"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/thirty_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/maxTempText"
+            app:layout_constraintTop_toBottomOf="@+id/minText" />
+
+        <TextView
+            android:id="@+id/MaxText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/one_one_five_dp"
+            android:layout_marginTop="@dimen/three_five_zero_dp"
+            android:fontFamily="@font/exo"
+            android:text="Max"
+            android:textColor="@color/backgroundCOlorEnd"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sunriseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hundred"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:fontFamily="@font/exo"
+            android:text="Sunrise"
+            android:textColor="@color/backgroundCOlorEnd"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/maxTempText" />
+
+        <TextView
+            android:id="@+id/humadityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hundred"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:fontFamily="@font/exo"
+            android:text="Humidity"
+            android:textColor="@color/backgroundCOlorEnd"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sunriseTimeText" />
+
+        <TextView
+            android:id="@+id/cloudCoverText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/eight_five_dp"
+            android:fontFamily="@font/exo"
+            android:text="Cloud Cover"
+            android:textColor="@color/backgroundCOlorEnd"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/humadityText"
+            app:layout_constraintTop_toBottomOf="@+id/sunsetTimeText" />
+
+        <TextView
+            android:id="@+id/SunsetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/hundred"
+            android:fontFamily="@font/exo"
+            android:text="Sunset"
+            android:textColor="@color/backgroundCOlorEnd"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/sunriseText"
+            app:layout_constraintTop_toBottomOf="@+id/minTempText" />
+
+        <TextView
+            android:id="@+id/minText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/one_five_zero_dp"
+            android:layout_marginTop="@dimen/three_five_zero_dp"
+            android:layout_marginEnd="@dimen/one_one_five_dp"
+            android:fontFamily="@font/exo"
+            android:text="Min"
+            android:textColor="@color/backgroundCOlorEnd"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintStart_toEndOf="@+id/MaxText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
